@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{%static 'result.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Word count</title>
+</head>
+<body>
+    <div class="text">
+        <strong>입력값:</strong>
+            
+            {{text}}
+    </div>
+
+    <div class="len">
+        <div>
+        <strong>공백 포함 글자수: </strong>
+            {{total_len}}
+        </div>
+
+        <div>
+            <strong>공백 제외 글자수: </strong>
+            {{text_len}}
+        </div>
+
+        <div>
+        <strong> 단어 수:  </strong>
+            {{vocab_len}}
+        </div>
+    </div>    
+</body>
+</html>

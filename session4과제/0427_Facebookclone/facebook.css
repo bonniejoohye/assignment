@@ -1,0 +1,265 @@
+body {
+    background-color: white;
+    margin-left:0px;
+    margin-right:0px;
+    font-family: Noto Sans KR;
+}
+
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    font-size: 12px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right:10px;
+    font-weight: 700;
+}
+
+
+.battery {
+    width:15%;
+    padding-bottom: 2px;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 9px;
+}
+
+.facebook{
+    width: 130px;
+    height: 50px;
+}
+
+.message{
+    width:90px;
+}
+
+.highlight{
+    display: flex;
+    justify-content: flex-start;
+    margin-left:10px;
+}
+
+.highlight >.story{
+    border: solid 1px lightgray;
+    border-radius: 20px;
+    width: 85px;
+    height: 150px;
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+.highlight>div:first-child {
+    background-image: url("http://bitly.kr/dZ1Ww8kkR");
+    background-size: 100% 63%;
+    background-repeat: no-repeat;
+    background-color: #F7F8F9;
+    background-position: top;
+}
+
+.story_circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #1877f3;
+    background-size: cover;
+    background-position: center center;
+    left: 7%;
+    top: 3%;
+    border: 3.5px solid #1877f3;
+}
+
+.highlight>div:first-child>.story_circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    background-color: #1877f3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    box-sizing: border-box;
+}
+
+.story_descrip {
+    position: absolute;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.highlight>div:first-child>.story_descrip{
+    top: 80%;
+}
+
+.gray {
+    width: 375px;
+    height: 10px;
+    background-color:#c9ccd1;
+    margin-top: 8px;
+}
+
+.thinking{
+    display: flex;
+    justify-content: flex-start;
+    margin-left:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 18px;
+
+}
+
+.thinking img{
+    width:40px;
+    height:40px;
+    border: solid 1px white;
+    border-radius:40px;    
+    margin-right: 10px;
+}
+
+.upload{
+    border-top: solid 1px lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.upload div{
+    display: flex;
+    align-items: center;
+}
+
+.upload img{
+    width: 20px;
+    height: 20px;
+}
+
+.upload p{
+    font-size: 13px;
+    margin: 0px 5px;
+}
+
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    margin-top:10px;
+    margin-left: 10px;
+    align-items: flex-start;
+}
+
+.profile img{
+    width:40px;
+    height:40px;
+    border: solid 1px white;
+    border-radius:40px;   
+    margin-right:10px; 
+}
+
+.descrip {
+    margin-top: 5px;
+    margin-right:140px;
+    font-size: 14px;
+}
+
+.lightgray{
+    color: gray;
+}
+
+.dot{
+    height: 3px;
+    width: 3px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+}
+
+.paragraph{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.image {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+}
+
+.left img {
+    width: 250px;
+    height: 345px;
+    margin-right: 10px;
+}
+
+.right img {
+    flex-direction: row;
+    width: 112px;
+    height: 112px;
+}
+
+.right #last{
+
+}
+
+
+.likes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.likes div{
+    margin-right:5px;
+    font-size:13px;
+}
+
+.likes #num {
+    margin-right: 130px;
+}
+
+.likes img{
+    width:50px;
+    margin-top: 6px;
+}
+/* 
+.share{
+    width: 10px;
+    border: solid 1px white;
+    border-radius:10px;   
+} */
+
+.end{
+    display: flex;
+    justify-content: space-around;
+}
+
+.end img{
+    width:40px;
+    height:40px;
+    padding-top:6px;
+}
+
+.end #home {
+    border-top: solid 2px #1977f3;
+}

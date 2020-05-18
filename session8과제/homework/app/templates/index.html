@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'movie_in_html' %}">movie</a>
+    <p>article num : {{articles_movie_count}}</p>
+    <br>
+    <a href="{% url 'drama_in_html' %}">drama</a>
+    <p>article num : {{articles_drama_count}}</p>
+    <br>
+    <a href="{% url 'entertain_in_html' %}">entertainment</a>
+    <p>article num : {{articles_entertain_count}}</p>
+    <br>
+    <br>
+    <a href="{% url 'new_in_html' %} "> wanna write some new article? </a>
+
+</body>
+</html>

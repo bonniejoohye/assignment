@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'new_in_html' %}">
+        {%csrf_token %}
+        <input name="title" placeholder="write your title here">
+        <input name="content" placeholder="write your own description here">
+        <select name="category">
+            <option value="">category</option>
+            <option value="movie">movie</option>
+            <option value="drama">drama</option>
+            <option value="entertain">entertainment</option>
+        </select>
+        <button type="submit">submit</button>
+     </form>
+</body>
+</html>
