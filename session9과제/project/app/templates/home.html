@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}" type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="total">
+        <div class='header'>
+            <h1 class="title">
+                todo list
+            </h1>
+        </div>
+
+        <!-- <div class="clock">
+            <h1>현재 시각</h1>
+            <div class="day">day</div>
+            <div class="time">time</div>
+        </div> -->
+
+        <div class='text'>
+            {% for post in posts %}
+            <div class="sub_text">
+                <span class="material-icons" style="font-size: 20px; color: gray;"> 
+                done_outline
+                </span>
+                <a class ="detail" href="{% url 'detail' post.pk %}">{{post.title}}</a>
+                <p class="timeuntil">{{post.duedate|timeuntil}} left</p>
+            </div>
+            <div class=line> </div>
+            {% endfor %}
+        </div>
+
+        <div class='footer'>
+            <a class="button" href="{% url 'new' %}">
+                <span class="material-icons" style="font-size: 50px;">
+                add_circle
+                </span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
