@@ -1,0 +1,38 @@
+{%extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'new.css' %}" type='text/css'>
+{% endblock head %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class = total>
+        <div class ="new">
+            <div class="newpost">새로운 할일은 뭔가요?</div>
+        </div>
+
+        <div class="title">
+            <input class="titletext" type="text" name="title" placeholder="일정을 입력해주세요">
+        </div>
+
+        <div class="content">
+            <textarea class="contenttext" cols="30" rows="10" name="content" placeholder="일정의 내용을 입력해주세요"></textarea>
+        </div>
+
+        <div class="duedate">
+            <label class="label"> 새로운 할일의 마감은? </label>
+            <input class="duedatetext" type="date" name="duedate" placeholder="마감기한을 입력해주세요">
+        </div>
+
+        <div class="bottom">
+            <button class="button" type="submit">
+            <span class="material-icons" style="font-size: 20px; color:white;"> 
+            done_outline
+            </span>
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock content %}

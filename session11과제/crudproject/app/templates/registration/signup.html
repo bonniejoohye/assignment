@@ -1,0 +1,28 @@
+{%extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<link rel="stylesheet" href="{% static 'login.css' %}" type='text/css'>
+{% endblock head %}
+
+{% block content %}
+    <h1>회원가입</h1>
+    {% if error %}
+    <h3 style="color: red;">{{error}}</h3>
+    {% endif %}
+    <form method = "POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="이름">
+        <input tyep="password" name="password" placeholder="비밀번호">
+        <button type="submit">가입하기</button>
+        <a class="nav-item-kakao" href="{% provider_login_url 'kakao' %}">카카오톡 로그인</a>
+        <a class="nav-item-google" href="{% provider_login_url 'google' %}">구글 로그인</a>
+    </form>
+
+    <div class="bottom">
+        <a class="button" href="{% url 'home' %}">
+            <span class="material-icons" style="font-size: 30px;">home</span>
+        </a>
+{% endblock content %}

@@ -1,0 +1,98 @@
+body {
+    background-color:#f0efe9;
+    letter-spacing: -1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.total {
+    width: 600px;
+    background-image:url('./모눈임.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    width:400px;
+}
+.new{
+    width: 300px;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #5a5d6d;
+    padding-bottom: 0px;
+    margin: 30px;
+    margin-bottom:5px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    
+}
+.newpost{
+    font-size: 20px;
+    border-bottom: solid 2px gray;
+}
+
+.titletext{
+    height: 40px;
+    width: 280px;
+    padding: 7px;
+    font-size: 22px;
+    font-weight: bold;
+    margin : 10px;
+    margin-top: 15px;
+}
+
+.contenttext{
+    box-sizing: border-box;
+    height: 160px;
+    width: 300px;
+    background-color:rgb(228, 228, 228);
+    padding: 7px;
+    font-size: 16px;
+    margin : 5px;
+}
+
+.duedate{
+    width: 300px;
+    height: 50px;
+    color: rgb(161, 161, 161);
+    letter-spacing: 1px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label{
+    margin-right: 10px;
+}
+
+.duedatetext{
+    width: 120px;
+}
+.button {
+    box-sizing: border-box;
+    border: white;
+    height: 40px;
+    width : 40px;
+    background-color :  #58e2a6;
+    border-radius: 50%;
+    color : #58e2a6;
+    padding: 3px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.bottom{
+    height: 25px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
