@@ -1,0 +1,48 @@
+{%extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'mypage.css' %}" type='text/css'>
+{% endblock head %}
+
+{% block content %}
+<div class="total">   
+    <div class="intro"><strong>{{ user.username }}님이 <br>작성하신 글과 댓글</strong></div>
+    <div class="my_todos">   
+        <h3>내가 쓴 글</h3> 
+        {% for post in posts %}   
+        {% if user.is_authenticated and post.author.pk == user.pk %}  
+        <div class="my_todo_list">
+            <div class="title">
+                <div><a href="{% url 'detail' post.pk %}">제목: {{ post.title }}</a></div>
+            </div>
+            <div class="content">
+                <p>내용: {{ post.content }}<p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="comment"> 
+        <h3>내가 쓴 댓글</h3>       
+        {% for post in posts %}
+        {% for comment in post.comments.all %}   
+        {% if user.is_authenticated and comment.author.pk == user.pk %}
+        <div class="commenttext">
+            <p> 댓글 : {{ comment.content }}</p>
+            <p> 출처 : <a href="{% url 'detail' post.pk %}">{{ post.title }}</a></p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="bottom">
+        <a class="button" href="{% url 'home' %}">
+            <span class="material-icons" style="font-size: 30px;">home</span>
+        </a>
+</div>
+
+{% endblock content %}
+
+
+ 
