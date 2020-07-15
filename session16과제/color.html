@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+</head>
+
+<body>
+    <h1>random color gang!</h1>
+
+    <script>
+        const getRandomColor = () => {
+            var num1 = Math.floor(Math.random() * 226);
+            var num2 = Math.floor(Math.random() * 226);
+            var num3 = Math.floor(Math.random() * 226);
+            const R = num1.toString(16);
+            const G = num2.toString(16);
+            const B = num3.toString(16);
+            const color = `#${R}${G}${B}`;
+            return color;
+        };
+
+        setInterval(() => {
+            document.querySelector("body").style.background = getRandomColor();
+        }, 100);
+
+    </script>
+
+</body>
+
+</html>

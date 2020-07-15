@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+</head>
+
+<body>
+    <h1 class="now"></h1>
+
+    <script>
+        const clockContent = document.querySelector('.now');
+
+        function getTime() {
+            const date = new Date();
+            const month = date.getMonth();
+            const clockDate = date.getDate();
+            const day = date.getDay();
+            const week = ['일', '월', '화', '수', '목', '금', '토'];
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            clockContent.innerText = `${month + 1}월 ${clockDate}일 ${week[day]}요일` + ` ` +
+                `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+        }
+
+        function initTime() {
+            getTime();
+            setInterval(getTime, 1000);
+        }
+
+        initTime();
+    </script>
+</body>
+
+</html>
