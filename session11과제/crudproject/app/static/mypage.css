@@ -1,73 +1,86 @@
 .total {
-    background-image:url('./모눈임.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding-bottom: 30px;
-    width:400px;
+  background-image: url("./모눈임.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 30px;
+  width: 400px;
 }
 
-.intro{
-    color:#58e2a6;
-    margin:20px;
-    text-align: left;
-    width:400px;
-    padding-left: 50px;
+.intro {
+  color: #58e2a6;
+  margin: 20px;
+  text-align: left;
+  width: 400px;
+  padding-left: 50px;
+  font-size: 20px;
 }
 
-.title a{
-    font-weight: bold;
-    margin-right: 5px;
-    color: #5a5d6d;  
-    letter-spacing: 1px;
-    font-size: 15px;  
-    width: 100px;  
+.title a {
+  margin-right: 5px;
+  color: #5a5d6d;
+  letter-spacing: 1px;
+  font-size: 13px;
+  width: 100px;
+  text-decoration: none;
 }
 
-.title{
-    width: 250px;
-    display: flex;
-    justify-content: flex-start;
+.title {
+  width: 250px;
+  font-style: bold;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #ececec;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
-.my_todos{
-    width: 350px;
+.my_todos {
+  width: 350px;
 }
 
-.comment{
-    width: 350px;
-    display: flex;
-    flex-direction: column;
+.comment {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
-.my_todos p{
-    font-size:10px;
-    color: gray;
-    margin-bottom: 10px;
+.like {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.commenttext{
-    font-size:12px;
-    color: gray;
-    margin-bottom: 10px;
+.my_todos p {
+  font-size: 10px;
+  color: gray;
+  margin-bottom: 10px;
 }
 
-.button{
-    color:#58e2a6;
+.commenttext {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+  background-color: #c0c1c7;
 }
 
-.bottom{
-    height: 25px;
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top:20px;
-    border-top: lightgray 1px dotted;
-    padding-top: 20px;
+.button {
+  color: #58e2a6;
+}
+
+.bottom {
+  height: 25px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  border-top: lightgray 1px dotted;
+  padding-top: 20px;
 }

@@ -6,8 +6,8 @@
 {% endblock head %}
 
 {% block content %}
-<div class="total">   
-    <div class ="title">
+<div class="total">
+    <div class="title">
         <div class="titletext">{{post.title}}</div>
     </div>
 
@@ -15,31 +15,43 @@
         <p class="duedatetext"> 마감기한: {{post.duedate}}</p>
     </div>
 
-    <div class = "content">
+    <div class="content">
         <p class="contenttext">{{post.content}}</p>
+        <img src="{{ post.img }}">
     </div>
 
-    <div class ="comment">
+
+
+    <div class="comment">
         <p>댓글</p>
         {% for comment in post.comments.all %}
         <div class="commenttext">
-        <li> {{ comment.content }} </li>
-        {% if user.is_authenticated and comment.author.pk == user.pk %}    
-        <a class="commentdelete" href="{%url 'delete_comment' post.pk comment.pk %}"> 삭제 </a>
-        {% endif %}
+            <li> {{ comment.content }} </li>
+            {% if user.is_authenticated and comment.author.pk == user.pk %}
+            <a class="commentdelete" href="{%url 'delete_comment' post.pk comment.pk %}"> 삭제 </a>
+            {% endif %}
         </div>
         {% endfor %}
-        
+
 
         <div class="newcomment">
             {% if user.is_authenticated %}
             <form method="POST">
-            {% csrf_token %}
+                {% csrf_token %}
                 <input class="newcommenttext" type="text" name="content" placeholder="  댓글을 입력하세요">
                 <button type="submit">확인</button>
-            </form> 
-            {% endif %} 
+                {% endif %}
+            </form>
         </div>
+
+
+    </div>
+
+    <div class="likeandwish">
+        <button id="like-button" class="like-button {% if is_like == True %}red{% endif %}" onclick="like()">좋아요
+            {{post.likes.count}}개 </button>
+        <button id="wish-button" class="wish-button {% if is_wish == True %}blue{% endif %}" onclick="wish()">찜하기
+            {{post.wishes.count}}개 </button>
     </div>
 
     <div class="bottom">
@@ -54,7 +66,48 @@
             <span class="material-icons" style="font-size: 30px;">delete</span>
         </a>
         {% endif %}
-        
+
     </div>
 </div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    const like = () => {
+        axios('/like', {
+            method: "POST",
+            data: { post_pk: "{{ post.pk }}" }
+        })
+            .then(response => {
+                document.getElementById('like-button').innerHTML = '좋아요 ' + response.data.like_count + '개';
+                if (response.data.is_like == true) {
+                    document.getElementById('like-button').classList.add('red');
+                    response.data.is_like = false
+                } else {
+                    document.getElementById('like-button').classList.remove('red');
+                }
+            })
+            .catch(error => console.error(error))
+    }
+
+
+    const wish = () => {
+        axios('/wish', {
+            method: "POST",
+            data: { post_pk: "{{ post.pk }}" }
+        })
+            .then(response => {
+                document.getElementById('wish-button').innerHTML = '찜하기 ' + response.data.wish_count + '개';
+                if (response.data.is_wish == true) {
+                    document.getElementById('wish-button').classList.add('blue');
+                    response.data.is_wish = false
+                } else {
+                    document.getElementById('wish-button').classList.remove('blue');
+                }
+            })
+            .catch(error => console.error(error))
+    }
+
+
+</script>
+
 {% endblock content %}

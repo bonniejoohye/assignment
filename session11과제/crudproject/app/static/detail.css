@@ -1,111 +1,142 @@
 body {
-    background-color:#f0efe9;
-    letter-spacing: -1px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: #f0efe9;
+  letter-spacing: -1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .total {
-    width: 600px;
-    background-image:url('./모눈임.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding-bottom: 30px;
-    width:400px;
+  width: 600px;
+  background-image: url("./모눈임.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 30px;
+  width: 400px;
 }
 
-.title{
-    width: 300px;
-    font-weight: bold;
-    margin-right: 5px;
-    color: #5a5d6d;
-    padding-bottom: 0px;
-    margin: 30px;
-    margin-bottom:5px;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    
+.title {
+  width: 300px;
+  font-weight: bold;
+  margin-right: 5px;
+  color: #5a5d6d;
+  padding-bottom: 0px;
+  margin: 30px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
 }
 
-.titletext{
-    font-size: 28px;
-    border-bottom: solid 2px gray;
+.titletext {
+  font-size: 28px;
+  border-bottom: solid 2px gray;
 }
 
-.duedate{
-    font-size: 12px;
-    color: rgb(161, 161, 161);
-    letter-spacing: 1px;
+.duedate {
+  font-size: 12px;
+  color: rgb(161, 161, 161);
+  letter-spacing: 1px;
 }
 
-.content{
-    width: 300px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(98, 97, 97);
-    border-bottom: 1px dotted lightgray;
+.content {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(98, 97, 97);
+  border-bottom: 1px dotted lightgray;
 }
 
-.button{
-    color:#58e2a6;
+.button {
+  color: #58e2a6;
 }
 
-.bottom{
-    height: 25px;
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top:20px;
-    border-top: lightgray 1px dotted;
-    padding-top: 20px;
+#like-button {
+  background-color: rgb(240, 240, 240);
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 12px;
 }
 
-.comment{
-    width: 250px;
-    background-color: rgb(240, 240, 240);
-    padding: 15px;
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: baseline;
+#wish-button {
+  background-color: rgb(240, 240, 240);
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 12px;
 }
 
-.comment p{
-    color: gray;
-    margin-bottom: 8px;
-    margin-top: 3px;
-    font-size: 13px;
+.bottom {
+  height: 25px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  border-top: lightgray 1px dotted;
+  padding-top: 20px;
 }
 
-.commenttext{
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
+.comment {
+  width: 250px;
+  background-color: rgb(240, 240, 240);
+  padding: 15px;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: baseline;
 }
 
-.commentdelete{
-    color: gray;
-    font-size: 11px;
-    margin-left: 20px;
-    margin-bottom: 10px;
+.comment p {
+  color: gray;
+  margin-bottom: 8px;
+  margin-top: 3px;
+  font-size: 13px;
 }
 
-.newcommenttext{
-    width: 150px;
-    margin-right: 5px;
+.commenttext {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
 }
 
+.commentdelete {
+  color: gray;
+  font-size: 11px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 
+.newcommenttext {
+  width: 150px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
 
+.red {
+  color: #dd2727;
+}
+
+.blue {
+  color: #007fff;
+}
+
+.likeandwish {
+  margin-top: 20px;
+}

@@ -7,12 +7,32 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField(null=True)
     duedate = models.DateTimeField(null=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
-    
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='posts')
+
     def __str__(self):
         return self.title
 
+
 class Comment(models.Model):
-    post = models.ForeignKey(Post,on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
     content = models.TextField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='comments')
+
+
+class Like(models.Model):
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='likes')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='likes')
+
+
+class Wish(models.Model):
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='wishes'
+    )
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='wishes'
+    )
